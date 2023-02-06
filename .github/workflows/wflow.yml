@@ -1,0 +1,13 @@
+jobs:
+  build: 
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/seyup-node@v1
+      - name: run setup
+        run: make setup
+      - name: run tests
+        run: make test
+      - name: run linter
+        run: make lint
